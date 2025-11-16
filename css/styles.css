@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background: radial-gradient(circle, #ffffff 0%, aliceblue 100%);
+  background: radial-gradient(circle, #3d2b1f 0%, #e1d2c1 100%);
   background-size: cover;
 }
 
@@ -181,6 +181,10 @@ body {
   grid-row: 1;
 }
 
+.portfolio-row-one-title {
+  margin-left: 210px;
+}
+
 .portfolio-row span {
   flex-grow: 1;
   flex-shrink: 1;
@@ -313,15 +317,15 @@ body {
   justify-content: center;
   margin: 20px;
   width: calc(100% - 40px);
-  margin-top: 40px;
-  background: linear-gradient(135deg, #f8fbff 0%, #dbe7f3 100%);
+  margin-top: 10px;
+  background: #d8c5b2;
   height: 700px;
   opacity: 80%;
 }
 
 .form-title {
-  margin-top: 20px;
-  margin-left: 50px;
+  margin-top: 40px;
+  margin-left: 30px;
   padding: 20px;
   padding-bottom: 10px;
 }
@@ -338,8 +342,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-left: 10px;
-  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-top: -60px;
 }
 
 .input-style {
@@ -356,7 +360,7 @@ body {
   width: 100px;
   height: 30px;
   align-content: center;
-  margin-left: 160px;
+  margin-left: 80px;
   margin-top: 20px;
 }
 
@@ -411,14 +415,14 @@ body {
 }
 
 .footer-style {
-  background-color: #b3c9e2;
+  background-color: #6b5b52;
   padding: 15px;
   width: 100%;
   height: 400px;
 }
 
 .footer-style a {
-  color: white;
+  color: #f7e9c8;
   text-decoration: none;
   font-size: 1.2em;
   margin-top: 5px;
@@ -451,7 +455,7 @@ body {
 }
 
 .social-media {
-  color: #ffffff;
+  color: #f7e9c8;
   margin: 10px;
   padding: 10px;
 }
@@ -467,7 +471,7 @@ body {
 }
 
 .address-text {
-  color: #ffffff;
+  color: #f7e9c8;
   font-size: larger;
   font-weight: bolder;
   margin-left: 30px;
@@ -476,13 +480,13 @@ body {
 
 .section-separator {
   border: none;
-  border-top: 1px solid #cedbf1;
+  border-top: 1px solid #f7e9c8;
   width: 100%;
 }
 
 .footer-text {
   margin-top: 30px;
-  color: #ffffff;
+  color: #f7e9c8;
   font-size: larger;
   font-weight: normal;
   display: block;
