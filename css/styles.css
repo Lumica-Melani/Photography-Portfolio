@@ -181,85 +181,76 @@ body {
   grid-row: 1;
 }
 
+.row-two {
+  grid-row: 3;
+  margin-top: 20px;
+}
+
 .portfolio-row-one-title {
   margin-left: 210px;
 }
 
-.portfolio-row span {
+.Gallery-Title {
+  grid-row: 2;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.portfolio-row .portfolio-column {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
 }
 
-.wed-image2 {
+.wed-image-col,
+.cinematic-image {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 1em;
 }
 
-.portfolio-row .wed-image2 img {
+.column-two {
+  margin-top: 10px;
+}
+
+.image-item {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.image-item img {
   width: 100%;
   height: auto;
-  justify-content: space-between;
+  display: block;
   object-fit: cover;
+  /* Animation properties */
   opacity: 0;
   transform: translateY(20px);
   animation: slideUp 0.8s ease-out forwards;
 }
 
+/* --- Inner Flex (for column 2 of Wedding section) --- */
+.flex-row-3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+}
+
+.flex-row-3 .image-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* --- Animation --- */
 @keyframes slideUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.flex-row-3 {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  gap: 1em;
-  justify-content: flex-start;
-  align-content: flex-start;
-}
-
-.flex-row-3 img {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
-.flex-row-3 .flex3 {
-  flex-grow: 1;
-
-  flex-basis: 0;
-}
-
-.wed-image2 .ring {
-  margin-top: 10px;
-}
-
-.wed-image2 .gown {
-  margin-top: 10px;
-}
-
-.wed-image2 .bnw {
-  margin-top: 10px;
-}
-
-.wed-image2 .shoes {
-  margin-top: 10px;
-}
-
-.wed-image2 .banquet {
-  margin-top: 10px;
 }
 
 .flex-text {
@@ -278,35 +269,6 @@ body {
   margin-left: 6px;
   font-size: 20px;
   font-family: fantasy;
-}
-
-.Gallery-Title {
-  grid-row: 2;
-  display: flex;
-  padding: 10px;
-
-  justify-content: center;
-}
-
-.row-two {
-  grid-row: 3;
-  margin-top: 20px;
-}
-
-.cinematic-image {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.cinematic-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.column-two {
-  margin-top: 10px;
 }
 
 /* END OF PORTFOLIO */
