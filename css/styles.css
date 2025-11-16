@@ -493,3 +493,33 @@ body {
   align-items: center;
   margin-left: 250px;
 }
+
+/* nav menu */
+
+.nav-bg {
+  background-color: #6b5b52;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.nav-body {
+  background: none;
+}
+
+.nav-menu {
+  border: none;
+  cursor: pointer;
+  background: none;
+  width: 100px;
+  margin-right: 70px;
+  margin-top: 40px;
+  font-size: x-large;
+  opacity: 70%;
+}
+
+/* end of nav menu */
