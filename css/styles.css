@@ -354,6 +354,26 @@ body {
   margin-top: 50px;
 }
 
+.no-bg {
+  background: none;
+}
+
+.confirmPage {
+  display: block;
+  width: calc(100%-40px);
+  height: 700px;
+  background: #d8c5b2;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.confirm-text {
+  justify-content: center;
+  margin-top: 300px;
+  margin-left: 150px;
+}
+/* end of form */
+
 .review {
   display: flex;
   flex-direction: row;
