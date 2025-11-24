@@ -1,3 +1,27 @@
+import React from "react";
+import "./styles.css";
+
+const reviewData = [
+  {
+    imageUrl: "public/reviewbox-images/client1.jpg",
+    review:
+      "We absolutely loved working with Placeholder Photography! They were professional, friendly, and captured all the joy and little moments of our wedding day perfectly.",
+    name: "Rishab",
+  },
+  {
+    imageUrl: "public/reviewbox-images/client2.jpg",
+    review:
+      "Placeholder Photography was simply amazing! They made us feel so relaxed and comfortable throughout the day. The final photo gallery was breathtaking.",
+    name: "Ananya",
+  },
+  {
+    imageUrl: "public/reviewbox-images/client3.jpg",
+    review:
+      "We couldn't have asked for a better experience! The team was incredibly organized and discreet, yet somehow managed to be everywhere at once.",
+    name: "Madeline",
+  },
+];
+
 function App() {
   return (
     <div>
@@ -5,7 +29,12 @@ function App() {
       <About />
       <Portfolio />
       <Form />
-      <Review />
+      <div className="review">
+        {reviewData.map((item) => (
+          <Review reviewData={item} />
+        ))}
+      </div>
+
       <Footer />
     </div>
   );
@@ -300,47 +329,16 @@ function Form() {
   );
 }
 
-function Review() {
+function Review({ reviewData }) {
   return (
-    <div class="client-review">
-      <div class="review">
-        <span class="review-box">
-          <img
-            src="public/reviewbox-images/client1.jpg"
-            alt="Client Rishab"
-            className="review-image"
-          />
-          <p class="review-text">
-            "We absolutely loved working with Placeholder Photography! They were
-            professional, friendly, and captured all the joy and little moments
-            of our wedding day perfectly." - Rishab
-          </p>
-        </span>
-        <span class="review-box">
-          <img
-            src="public/reviewbox-images/client2.jpg"
-            alt=""
-            class="review-image"
-          />
-          <p class="review-text">
-            "Placeholder Photography was simply amazing! They made us feel so
-            relaxed and comfortable throughout the day. The final photo gallery
-            was breathtaking."- Madeline
-          </p>
-        </span>
-        <span class="review-box">
-          <img
-            src="public/reviewbox-images/client3.jpg"
-            alt=""
-            class="review-image"
-          />
-          <p class="review-text">
-            "We couldn't have asked for a better experience! The team was
-            incredibly organized and discreet, yet somehow managed to be
-            everywhere at once."- Ananya
-          </p>
-        </span>
-      </div>
+    <div className="review-box">
+      <img
+        src={reviewData.imageUrl}
+        alt="Client Rishab"
+        className="review-image"
+      />
+      <p className="review-text">{reviewData.review}</p>
+      <p>-{reviewData.name}</p>
     </div>
   );
 }
