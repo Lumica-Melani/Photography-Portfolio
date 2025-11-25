@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 const reviewData = [
@@ -23,18 +23,29 @@ const reviewData = [
 ];
 
 function App() {
+  const [openConfirmPage, setOpenConfirmPage] = useState(false);
+
+  const [submittedData, setSubmittedData] = useState(null);
+
+  function toggleForm(data) {
+    setSubmittedData(data);
+    setOpenConfirmPage(true);
+  }
   return (
     <div>
       <Header />
       <About />
       <Portfolio />
-      <Form />
+      {openConfirmPage ? (
+        <ConfirmPage data={submittedData} />
+      ) : (
+        <Form onSubmit={toggleForm} />
+      )}
       <div className="review">
         {reviewData.map((item) => (
           <Review reviewData={item} />
         ))}
       </div>
-
       <Footer />
     </div>
   );
@@ -258,18 +269,47 @@ function Portfolio() {
   );
 }
 
-function Form() {
+function Form({ onSubmit }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    type: "",
+    date: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData);
+  };
+
   return (
     <div class="form-box">
       <section class="booking-section">
         <h2 class="form-title">Share Your Vision</h2>
-        <form class="booking-form" action="#" method="post">
+        <form
+          class="booking-form"
+          action="#"
+          method="post"
+          onSubmit={handleSubmit}
+        >
           <div class="form-group">
             <input
               class="input-style"
               type="text"
-              id="name"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Enter your name"
               required
             />
@@ -279,8 +319,9 @@ function Form() {
             <input
               class="input-style"
               type="email"
-              id="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Enter your email"
               required
             />
@@ -290,14 +331,21 @@ function Form() {
             <input
               class="input-style"
               type="tel"
-              id="phone"
               name="phone"
+              value={formData.phone}
+              onChange={handleChange}
               placeholder="Enter your phone number"
             />
           </div>
 
           <div class="form-group">
-            <select class="input-style" id="type" name="type" required>
+            <select
+              class="input-style"
+              name="type"
+              value={formData.type}
+              onChange={handleChange}
+              required
+            >
               <option value="">Select...</option>
               <option value="wedding">Wedding</option>
               <option value="portrait">Portrait</option>
@@ -308,14 +356,22 @@ function Form() {
           </div>
 
           <div class="form-group">
-            <input class="input-style" type="date" id="date" name="date" />
+            <input
+              class="input-style"
+              type="date"
+              name="date"
+              value={formData.date.toString()}
+              onChange={handleChange}
+              required
+            />
           </div>
 
           <div class="form-group">
             <textarea
               class="long-text"
-              id="message"
               name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Tell us more about your vision..."
             ></textarea>
           </div>
@@ -325,6 +381,14 @@ function Form() {
           </button>
         </form>
       </section>
+    </div>
+  );
+}
+
+function ConfirmPage() {
+  return (
+    <div class="confirmPage">
+      <h1 class="confirm-text">We will reach out to you soon.</h1>
     </div>
   );
 }
