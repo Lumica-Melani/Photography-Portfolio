@@ -372,6 +372,17 @@ body {
   margin-top: 300px;
   margin-left: 150px;
 }
+
+.close-btn {
+  background: none;
+  border: none;
+  display: block;
+  padding: 30px;
+  cursor: pointer;
+  margin: 20px;
+  font-size: x-large;
+  transform: rotate(45deg);
+}
 /* end of form */
 
 .review {
