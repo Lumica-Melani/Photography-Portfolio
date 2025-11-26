@@ -27,38 +27,61 @@ function App() {
 
   const [submittedData, setSubmittedData] = useState(null);
 
+  const [navMenu, setNavMenu] = useState(false);
+
+  function openNavMenu() {
+    setNavMenu(true);
+  }
+
   function toggleForm(data) {
     setSubmittedData(data);
     setOpenConfirmPage(true);
   }
+
+  function closePage() {
+    setOpenConfirmPage(false);
+  }
   return (
     <div>
-      <Header />
-      <About />
-      <Portfolio />
-      {openConfirmPage ? (
-        <ConfirmPage data={submittedData} />
+      {navMenu ? (
+        <NavMenu closeNavMenu={() => setNavMenu(false)} />
       ) : (
-        <Form onSubmit={toggleForm} />
+        <Header openNavMenu={openNavMenu} />
       )}
-      <div className="review">
-        {reviewData.map((item) => (
-          <Review reviewData={item} />
-        ))}
+      <div id="about">
+        <About />
       </div>
+      <div id="portfolio">
+        <Portfolio />
+      </div>
+      <div id="contact">
+        {openConfirmPage ? (
+          <ConfirmPage data={submittedData} closePage={closePage} />
+        ) : (
+          <Form onSubmit={toggleForm} />
+        )}
+      </div>
+      <div id="reviews">
+        <div className="review">
+          {reviewData.map((item) => (
+            <Review reviewData={item} />
+          ))}
+        </div>
+      </div>
+
       <Footer />
     </div>
   );
 }
 
-function Header() {
+function Header({ openNavMenu }) {
   return (
     <header>
       <div class="videoWrapper">
         <div class="logo">
           <img src="public\header\placeholder_logo.png" alt="No image" />
         </div>
-        <button class="ham-menu" aria-label="Menu">
+        <button class="ham-menu" aria-label="Menu" onClick={openNavMenu}>
           <span></span>
           <span></span>
           <span></span>
@@ -72,6 +95,33 @@ function Header() {
         ></video>
       </div>
     </header>
+  );
+}
+
+function NavMenu({ closeNavMenu }) {
+  function scrollToSection(id) {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+  return (
+    <div class="nav-bg">
+      <button className="closeBtn" onClick={closeNavMenu}>
+        +
+      </button>
+      <button class="nav-menu" onClick={() => scrollToSection("about")}>
+        <span>About us</span>
+      </button>
+      <button class="nav-menu" onClick={() => scrollToSection("contact")}>
+        <span>Contact us</span>
+      </button>
+      <button class="nav-menu" onClick={() => scrollToSection("portfolio")}>
+        <span>Portfolio</span>
+      </button>
+      <button class="nav-menu" onClick={() => scrollToSection("reviews")}>
+        <span>Reviews</span>
+      </button>
+    </div>
   );
 }
 
@@ -385,10 +435,13 @@ function Form({ onSubmit }) {
   );
 }
 
-function ConfirmPage() {
+function ConfirmPage({ closePage }) {
   return (
-    <div class="confirmPage">
-      <h1 class="confirm-text">We will reach out to you soon.</h1>
+    <div className="confirmPage">
+      <button className="closeBtn" onClick={closePage}>
+        +
+      </button>
+      <h1 className="confirm-text">We will reach out to you soon.</h1>
     </div>
   );
 }

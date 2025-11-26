@@ -105,7 +105,7 @@ body {
       hsla(0, 0%, 100%, 0.2),
       hsla(0, 0%, 100%, 0.2)
     ),
-    url("/public/about/Wide (1).png");
+    url("/images/Wide.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -339,18 +339,35 @@ body {
 }
 
 .confirmPage {
-  display: block;
-  width: calc(100%-40px);
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 40px);
   height: 700px;
   background: #d8c5b2;
   margin: 20px;
+  margin-top: 20px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
+
 .confirm-text {
-  justify-content: center;
-  margin-top: 300px;
-  margin-left: 150px;
+  margin: 0;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 250px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  display: block;
+  margin: 50px;
+  font-size: xx-large;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 .review {
