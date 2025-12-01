@@ -1,22 +1,16 @@
-export default function Header({ openNavMenu }) {
+export default function Header({ logoSrc, videoSrc, onMenuClick }) {
   return (
     <header>
       <div class="videoWrapper">
         <div class="logo">
-          <img src="public\header\placeholder_logo.png" alt="No image" />
+          <img src={logoSrc} alt="No image" />
         </div>
-        <button class="ham-menu" aria-label="Menu" onClick={openNavMenu}>
+        <button class="ham-menu" aria-label="Menu" onClick={onMenuClick}>
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <video
-          src="public\header\Nature_placeholder.mp4"
-          controls
-          autoplay
-          muted
-          loop
-        ></video>
+        <video src={videoSrc} controls autoplay muted loop></video>
       </div>
     </header>
   );
