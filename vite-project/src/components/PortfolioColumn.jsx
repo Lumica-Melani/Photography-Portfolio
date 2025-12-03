@@ -5,6 +5,7 @@ export default function PortfolioColumn({
   className = "",
   bottomText,
   extraClass = "",
+  onImageClick,
 }) {
   const combinedClasses = `portfolio-column ${className} ${extraClass}`.trim();
   return (
@@ -14,6 +15,7 @@ export default function PortfolioColumn({
           key={index}
           src={img.src}
           className={img.className || ""}
+          onClick={() => onImageClick(img.src)}
         />
       ))}
 

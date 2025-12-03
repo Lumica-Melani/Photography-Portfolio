@@ -6,28 +6,47 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Form from "./components/Form";
 import ConfirmPage from "./components/ConfirmPage";
-import Review from "./components/Review";
+
 import Footer from "./components/Footer";
 import PortfolioColumn from "./components/PortfolioColumn";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ReviewCarousel from "./components/ReviewCarousel";
 
 const reviewData = [
   {
-    imageUrl: "public/reviewbox-images/client1.jpg",
-    review:
-      "We absolutely loved working with Placeholder Photography! They were professional, friendly, and captured all the joy and little moments of our wedding day perfectly.",
+    imageUrl: "reviewbox-images/client1.jpg",
+    review: "Great experience! Friendly, professional, and beautiful photos.",
     name: "Rishab",
   },
   {
-    imageUrl: "public/reviewbox-images/client2.jpg",
-    review:
-      "Placeholder Photography was simply amazing! They made us feel so relaxed and comfortable throughout the day. The final photo gallery was breathtaking.",
+    imageUrl: "reviewbox-images/client2.jpg",
+    review: "They made us feel relaxed, and the pictures turned out wonderful.",
     name: "Ananya",
   },
   {
-    imageUrl: "public/reviewbox-images/client3.jpg",
+    imageUrl: "reviewbox-images/client3.jpg",
     review:
-      "We couldn't have asked for a better experience! The team was incredibly organized and discreet, yet somehow managed to be everywhere at once.",
+      "Very organized and attentive. They captured every moment perfectly.",
     name: "Madeline",
+  },
+  {
+    imageUrl: "reviewbox-images/client4.jpg",
+    review:
+      "The pictures were magical! We couldn’t stop smiling looking through them.",
+    name: "Karthik",
+  },
+  {
+    imageUrl: "reviewbox-images/client5.jpg",
+    review:
+      "Every moment was captured beautifully without us even realizing it.",
+    name: "Devika",
+  },
+  {
+    imageUrl: "reviewbox-images/client6.jpg",
+    review:
+      "The edits were cinematic and flawless. Highly recommend their work!",
+    name: "Sanjana",
   },
 ];
 
@@ -154,11 +173,7 @@ function App() {
         )}
       </div>
       <div id="reviews">
-        <div className="review">
-          {reviewData.map((item) => (
-            <Review reviewData={item} />
-          ))}
-        </div>
+        <ReviewCarousel reviews={reviewData} />
       </div>
 
       <Footer />

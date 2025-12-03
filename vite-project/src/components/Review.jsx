@@ -1,6 +1,6 @@
 export default function Review({ reviewData }) {
   return (
-    <div className="review-box">
+    <div className="review-card">
       <img
         src={reviewData.imageUrl}
         alt="Client Rishab"
