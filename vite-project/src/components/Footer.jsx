@@ -1,3 +1,6 @@
+import Quote from "./Quote";
+import StudioMap from "./StudioMap";
+
 export default function Footer() {
   return (
     <footer className="footer-style">
@@ -55,8 +58,9 @@ export default function Footer() {
         </section>
         <section className="footer-address">
           <section className="footer-columns">
-            <span className="footer-rows">
+            <span>
               <p className="address-text">Visit us at</p>
+              <StudioMap />
             </span>
           </section>
         </section>
@@ -66,6 +70,7 @@ export default function Footer() {
 
       <section>
         <p className="footer-text">Placeholder Photography</p>
+        <Quote />
       </section>
     </footer>
   );

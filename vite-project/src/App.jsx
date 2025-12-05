@@ -12,6 +12,7 @@ import PortfolioColumn from "./components/PortfolioColumn";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReviewCarousel from "./components/ReviewCarousel";
+import "leaflet/dist/leaflet.css";
 
 const reviewData = [
   {

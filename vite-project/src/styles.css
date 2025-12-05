@@ -477,7 +477,14 @@ body {
   font-size: larger;
   font-weight: bolder;
   margin-left: 30px;
-  margin-top: -5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.leaflet-map {
+  height: 200px; /* full map height */
+  width: 100%;
+  border-radius: 20px;
 }
 
 .section-separator {
@@ -494,6 +501,19 @@ body {
   display: block;
   align-items: center;
   margin-left: 250px;
+}
+
+.footer-quote {
+  font-style: italic;
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.quote-error {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 /* nav menu */
