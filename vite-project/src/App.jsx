@@ -35,7 +35,7 @@ const reviewData = [
     imageUrl: "reviewbox-images/client4.jpg",
     review:
       "The pictures were magical! We couldn’t stop smiling looking through them.",
-    name: "Karthik",
+    name: "Sanya",
   },
   {
     imageUrl: "reviewbox-images/client5.jpg",
@@ -45,8 +45,7 @@ const reviewData = [
   },
   {
     imageUrl: "reviewbox-images/client6.jpg",
-    review:
-      "The edits were cinematic and flawless. Highly recommend their work!",
+    review: "The edits were cinematic and flawless. Highly recommend them!",
     name: "Sanjana",
   },
 ];
@@ -104,11 +103,7 @@ function App() {
 
   const [submittedData, setSubmittedData] = useState(null);
 
-  const [navMenu, setNavMenu] = useState(false);
-
-  function openNavMenu() {
-    setNavMenu(true);
-  }
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleForm(data) {
     setSubmittedData(data);
@@ -120,15 +115,14 @@ function App() {
   }
   return (
     <div>
-      {navMenu ? (
-        <NavMenu closeNavMenu={() => setNavMenu(false)} />
-      ) : (
-        <Header
-          logoSrc={"header/placeholder_logo.png"}
-          videoSrc={"header/Nature_placeholder.mp4"}
-          onMenuClick={openNavMenu}
-        />
-      )}
+      <Header
+        logoSrc="/header/placeholder_logo.png"
+        videoSrc="/header/Nature_placeholder.mp4"
+        onMenuClick={() => setIsMenuOpen(true)}
+        menuOpen={isMenuOpen}
+      />
+
+      {isMenuOpen && <NavMenu closeNavMenu={() => setIsMenuOpen(false)} />}
       <div id="about">
         <About imgSrc={"about/Team (1).jpg"}>
           <h1>about ;)</h1>
@@ -147,7 +141,7 @@ function App() {
         <Portfolio title="Wedding Photography">
           {weddingPictures.map((col, i) => (
             <PortfolioColumn
-              className="wed-image-col"
+              className="wed-image-col flex-text"
               key={i}
               images={col}
               bottomText={i === 0 ? "Timeless Elegance" : null}

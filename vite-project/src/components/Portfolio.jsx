@@ -26,7 +26,7 @@ export default function Portfolio({ title, children }) {
 
   return (
     <div className="wedding-portfolio-container">
-      <div className="Gallery-title">
+      <div className="Gallery-title flex-text">
         <h1>{title}</h1>
       </div>
 

@@ -7,7 +7,7 @@ export default function Quote() {
   useEffect(() => {
     async function fetchQuote() {
       try {
-        const res = await fetch("https://api.quotable.io/random");
+        const res = await fetch("http://api.quotable.io/random");
 
         if (!res.ok) {
           throw new Error("Error fetching quote");

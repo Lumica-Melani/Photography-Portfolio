@@ -3,7 +3,7 @@ export default function Review({ reviewData }) {
     <div className="review-card">
       <img
         src={reviewData.imageUrl}
-        alt="Client Rishab"
+        alt="Client Name"
         className="review-image"
       />
       <p className="review-text">{reviewData.review}</p>

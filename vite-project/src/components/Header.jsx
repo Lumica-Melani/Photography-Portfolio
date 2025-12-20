@@ -1,16 +1,18 @@
 export default function Header({ logoSrc, videoSrc, onMenuClick }) {
   return (
-    <header>
-      <div class="videoWrapper">
-        <div class="logo">
+    <header className="header">
+      <div className="videoWrapper">
+        <div className="logo">
           <img src={logoSrc} alt="No image" />
         </div>
-        <button class="ham-menu" aria-label="Menu" onClick={onMenuClick}>
+
+        <button className="ham-menu" onClick={onMenuClick} aria-label="Menu">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <video src={videoSrc} controls autoplay muted loop></video>
+
+        <video src={videoSrc} autoPlay muted loop />
       </div>
     </header>
   );

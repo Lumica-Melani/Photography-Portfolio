@@ -3,23 +3,29 @@ export default function NavMenu({ closeNavMenu }) {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
+    closeNavMenu();
   }
+
   return (
-    <div class="nav-bg">
+    <div className="nav-bg">
       <button className="closeBtn" onClick={closeNavMenu}>
         +
       </button>
-      <button class="nav-menu" onClick={() => scrollToSection("about")}>
-        <span>About us</span>
+
+      <button className="nav-menu" onClick={() => scrollToSection("about")}>
+        About Us
       </button>
-      <button class="nav-menu" onClick={() => scrollToSection("contact")}>
-        <span>Contact us</span>
+
+      <button className="nav-menu" onClick={() => scrollToSection("portfolio")}>
+        Portfolio
       </button>
-      <button class="nav-menu" onClick={() => scrollToSection("portfolio")}>
-        <span>Portfolio</span>
+
+      <button className="nav-menu" onClick={() => scrollToSection("reviews")}>
+        Reviews
       </button>
-      <button class="nav-menu" onClick={() => scrollToSection("reviews")}>
-        <span>Reviews</span>
+
+      <button className="nav-menu" onClick={() => scrollToSection("contact")}>
+        Contact
       </button>
     </div>
   );

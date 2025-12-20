@@ -92,6 +92,22 @@ body {
   }
 }
 
+.header {
+  position: relative;
+}
+
+.header.sticky {
+  position: sticky;
+  top: 0;
+  height: 64px;
+  background-color: black;
+  z-index: 1000;
+}
+
+.header.sticky .videoWrapper {
+  height: 64px;
+}
+
 /* Header End */
 
 /* About start */
@@ -135,26 +151,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  /* Removed width, margin-left, and margin-top */
+  align-items: flex-start;
   min-height: 400px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 6%;
+  gap: 1.2rem;
 }
 
 /* Text styles for the p tag inside the div */
-.about-Text p {
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: aliceblue;
-  overflow-wrap: break-word;
+.about-Text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  letter-spacing: 0.5px;
 }
 
-.about-Text h1 {
-  font-family: "Courier New", Courier, monospace;
-  align-self: flex-start;
-  padding-bottom: 20px;
+.about-Text p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(240, 248, 255, 0.9);
+  max-width: 550px;
 }
 
 /* About ends */
@@ -231,7 +249,6 @@ body {
   animation: slideUp 0.8s ease-out forwards;
 }
 
-/* --- Inner Flex (for column 2 of Wedding section) --- */
 .flex-row-3 {
   display: flex;
   flex-direction: column;
@@ -254,22 +271,19 @@ body {
 
 .flex-text {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-.flex-text p {
-  flex-grow: 1;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  margin-top: 15px;
-  margin-left: 6px;
-  font-size: 20px;
-  font-family: fantasy;
+  padding: 20px 0;
 }
 
+.flex-text p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #2b2b2b;
+}
 /* END OF PORTFOLIO */
 
 /* Starting of Form */
@@ -326,7 +340,7 @@ body {
 }
 
 .form-box {
-  background-image: url("/public/form_bg/cameras.png");
+  background-image: url("/form_bg/cameras.png");
   border: 1px solid #dce3ea;
   border-radius: 20px;
   padding: 40px;
@@ -379,8 +393,14 @@ body {
 }
 
 .review-text {
-  margin: 20px;
-  margin-left: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-style: italic;
+  opacity: 0.9;
 }
 
 .slick-slide {
@@ -419,7 +439,7 @@ body {
   background-color: #6b5b52;
   padding: 15px;
   width: 100%;
-  height: 400px;
+  height: 450px;
   margin-top: 40px;
 }
 
@@ -504,44 +524,68 @@ body {
 }
 
 .footer-quote {
+  font-family: "Playfair Display", serif;
   font-style: italic;
   margin-top: 10px;
-  opacity: 0.8;
-  font-size: 0.95rem;
+  opacity: 0.85;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .quote-error {
+  font-family: "Nunito", sans-serif;
   color: red;
   margin-top: 10px;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* nav menu */
 
 .nav-bg {
-  background-color: #6b5b52;
-  height: 700px;
-  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 10opx;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+
   display: flex;
   flex-direction: column;
-  justify-content: left;
   align-items: flex-end;
-  gap: 1em;
-}
+  gap: 1.2rem;
 
-.nav-body {
-  background: none;
+  padding: 70px 20px;
+  z-index: 9999;
 }
 
 .nav-menu {
-  border: none;
-  cursor: pointer;
   background: none;
-  width: 100px;
-  margin-right: 70px;
-  margin-top: 40px;
-  font-size: x-large;
-  opacity: 70%;
+  border: none;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  opacity: 0.85;
+  margin-top: 30px;
+}
+
+.nav-menu:hover {
+  opacity: 1;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  margin-bottom: 40px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /* end of nav menu */

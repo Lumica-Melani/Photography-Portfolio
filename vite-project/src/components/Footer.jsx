@@ -11,7 +11,7 @@ export default function Footer() {
             <span className="footer-rows">
               <img
                 className="footer-img"
-                src="public/footer-icons/youtube.png" // Fixed path
+                src="/footer-icons/youtube.png" // Fixed path
                 alt="Youtube icon and link"
               />
               <a href="https://www.youtube.com/">Youtube</a>
@@ -20,7 +20,7 @@ export default function Footer() {
             <span className="footer-rows">
               <img
                 className="footer-img"
-                src="public/footer-icons/instagram.png" // Fixed path
+                src="/footer-icons/instagram.png" // Fixed path
                 alt="Instagram icon and link"
               />
               <a href="https://www.instagram.com/">Instagram</a>
@@ -29,7 +29,7 @@ export default function Footer() {
             <span className="footer-rows">
               <img
                 className="footer-img"
-                src="public/footer-icons/facebook.png" // Fixed path
+                src="/footer-icons/facebook.png" // Fixed path
                 alt="Facebook icon and link"
               />
               <a href="https://www.instagram.com/">Facebook</a>
