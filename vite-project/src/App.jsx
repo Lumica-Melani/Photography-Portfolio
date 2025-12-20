@@ -13,88 +13,112 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReviewCarousel from "./components/ReviewCarousel";
 import "leaflet/dist/leaflet.css";
+// Reviews
+import client1 from "./assets/reviewbox-images/client1.jpg";
+import client2 from "./assets/reviewbox-images/client2.jpg";
+import client3 from "./assets/reviewbox-images/client3.jpg";
+import client4 from "./assets/reviewbox-images/client4.jpg";
+import client5 from "./assets/reviewbox-images/client5.jpg";
+import client6 from "./assets/reviewbox-images/client6.jpg";
 
-const reviewData = [
+// Wedding
+import beachWedding from "./assets/wedding/beachwedding.jpg";
+import ring from "./assets/wedding/ring.jpg";
+import ceremony from "./assets/wedding/ceremony.jpg";
+import weddingKiss from "./assets/wedding/weddingkiss.jpg";
+import hairstyle from "./assets/wedding/hairstyle.jpg";
+import groomSuit from "./assets/wedding/groomsuit.jpg";
+import brideLong from "./assets/wedding/bridelongshot.jpg";
+import bouquet from "./assets/wedding/bouquet.jpg";
+import fairytale from "./assets/wedding/fairytale.jpg";
+import kissBlur from "./assets/wedding/kissblur.jpg";
+import brideShoes from "./assets/wedding/brideshoes.jpg";
+import venue from "./assets/wedding/venue.jpg";
+
+// Cinematic
+import fleaMarket from "./assets/cinematic_photography/flea_market_vertical.jpg";
+import blurry from "./assets/cinematic_photography/blurry.jpg";
+import redSmoke from "./assets/cinematic_photography/red_smoke._vertical.jpg";
+import bathing from "./assets/cinematic_photography/bathing_vertical.jpg";
+import streetCar from "./assets/cinematic_photography/street_car.jpg";
+import shadow from "./assets/cinematic_photography/shadow.jpg";
+import starwars from "./assets/cinematic_photography/starwars_vertical.jpg";
+import goth from "./assets/cinematic_photography/goth.jpg";
+import photographer from "./assets/cinematic_photography/photographer_vertical.jpg";
+import pexels from "./assets/cinematic_photography/pexels-subhrovision-28991694.jpg";
+import queenbee from "./assets/cinematic_photography/queenbee_vertical.jpg";
+import passionate from "./assets/cinematic_photography/passionate_vertical.jpg";
+import darkalley from "./assets/cinematic_photography/darkalley_vertical.jpg";
+import ghostBride from "./assets/cinematic_photography/ghost_bride.jpg";
+
+import placeholder_logo from "./assets/header/placeholder_logo.png";
+import Nature_placeholder from "./assets/header/Nature_placeholder.mp4";
+import aboutimg from "./assets/about/aboutimg.jpg";
+export const reviewData = [
   {
-    imageUrl: "reviewbox-images/client1.jpg",
+    imageUrl: client1,
     review: "Great experience! Friendly, professional, and beautiful photos.",
     name: "Rishab",
   },
   {
-    imageUrl: "reviewbox-images/client2.jpg",
+    imageUrl: client2,
     review: "They made us feel relaxed, and the pictures turned out wonderful.",
     name: "Ananya",
   },
   {
-    imageUrl: "reviewbox-images/client3.jpg",
+    imageUrl: client3,
     review:
       "Very organized and attentive. They captured every moment perfectly.",
     name: "Madeline",
   },
   {
-    imageUrl: "reviewbox-images/client4.jpg",
+    imageUrl: client4,
     review:
       "The pictures were magical! We couldn’t stop smiling looking through them.",
     name: "Sanya",
   },
   {
-    imageUrl: "reviewbox-images/client5.jpg",
+    imageUrl: client5,
     review:
       "Every moment was captured beautifully without us even realizing it.",
     name: "Devika",
   },
   {
-    imageUrl: "reviewbox-images/client6.jpg",
+    imageUrl: client6,
     review: "The edits were cinematic and flawless. Highly recommend them!",
     name: "Sanjana",
   },
 ];
 
-const weddingPictures = [
+export const weddingPictures = [
+  [{ src: beachWedding }, { src: ring, className: "ring" }],
   [
-    { src: "wedding/beachwedding.jpg" },
-    { src: "wedding/ring.jpg", className: "ring" },
+    { src: ceremony },
+    { src: weddingKiss },
+    { src: hairstyle },
+    { src: groomSuit },
   ],
   [
-    { src: "wedding/ceremony.jpg" },
-    { src: "wedding/weddingkiss.jpg" },
-    { src: "wedding/hairstyle.jpg" },
-    { src: "wedding/groomsuit.jpg" },
+    { src: brideLong },
+    { src: bouquet, className: "gown" },
+    { src: fairytale, className: "bnw" },
   ],
   [
-    { src: "wedding/bridelongshot.jpg", className: "image-item" },
-    { src: "wedding/bouquet.jpg", className: "gown" },
-    { src: "wedding/fairytale.jpg", className: "bnw" },
-  ],
-  [
-    { src: "wedding/kissblur.jpg" },
-    { src: "wedding/brideshoes.jpg", className: "shoes" },
-    { src: "wedding/venue.jpg", className: "banquet" },
+    { src: kissBlur },
+    { src: brideShoes, className: "shoes" },
+    { src: venue, className: "banquet" },
   ],
 ];
 
-const cinematicPictures = [
+export const cinematicPictures = [
+  [{ src: fleaMarket }, { src: blurry }, { src: redSmoke }, { src: bathing }],
+  [{ src: streetCar }, { src: shadow }, { src: starwars }],
+  [{ src: goth }, { src: photographer }, { src: pexels }],
   [
-    { src: "cinematic_photography/flea_market_vertical.jpg" },
-    { src: "cinematic_photography/blurry.jpg" },
-    { src: "cinematic_photography/red_smoke._vertical.jpg" },
-    { src: "cinematic_photography/bathing_vertical.jpg" },
-  ],
-  [
-    { src: "cinematic_photography/street_car.jpg" },
-    { src: "cinematic_photography/shadow.jpg" },
-    { src: "cinematic_photography/starwars_vertical.jpg" },
-  ],
-  [
-    { src: "cinematic_photography/goth.jpg" },
-    { src: "cinematic_photography/photographer_vertical.jpg" },
-    { src: "cinematic_photography/pexels-subhrovision-28991694.jpg" },
-  ],
-  [
-    { src: "cinematic_photography/queenbee_vertical.jpg" },
-    { src: "cinematic_photography/passionate_vertical.jpg" },
-    { src: "cinematic_photography/darkalley_vertical.jpg" },
-    { src: "cinematic_photography/ghost_bride.jpg" },
+    { src: queenbee },
+    { src: passionate },
+    { src: darkalley },
+    { src: ghostBride },
   ],
 ];
 
@@ -116,15 +140,15 @@ function App() {
   return (
     <div>
       <Header
-        logoSrc="/header/placeholder_logo.png"
-        videoSrc="/header/Nature_placeholder.mp4"
+        logoSrc={placeholder_logo}
+        videoSrc={Nature_placeholder}
         onMenuClick={() => setIsMenuOpen(true)}
         menuOpen={isMenuOpen}
       />
 
       {isMenuOpen && <NavMenu closeNavMenu={() => setIsMenuOpen(false)} />}
       <div id="about">
-        <About imgSrc={"about/Team (1).jpg"}>
+        <About imgSrc={aboutimg}>
           <h1>about ;)</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam

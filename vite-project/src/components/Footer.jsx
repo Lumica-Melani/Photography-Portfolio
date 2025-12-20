@@ -1,5 +1,8 @@
 import Quote from "./Quote";
 import StudioMap from "./StudioMap";
+import facebook from "../assets/footer-icons/facebook.png";
+import instagram from "../assets/footer-icons/instagram.png";
+import youtube from "../assets/footer-icons/youtube.png";
 
 export default function Footer() {
   return (
@@ -11,7 +14,7 @@ export default function Footer() {
             <span className="footer-rows">
               <img
                 className="footer-img"
-                src="/footer-icons/youtube.png" // Fixed path
+                src={youtube}
                 alt="Youtube icon and link"
               />
               <a href="https://www.youtube.com/">Youtube</a>
@@ -20,7 +23,7 @@ export default function Footer() {
             <span className="footer-rows">
               <img
                 className="footer-img"
-                src="/footer-icons/instagram.png" // Fixed path
+                src={instagram}
                 alt="Instagram icon and link"
               />
               <a href="https://www.instagram.com/">Instagram</a>
@@ -29,7 +32,7 @@ export default function Footer() {
             <span className="footer-rows">
               <img
                 className="footer-img"
-                src="/footer-icons/facebook.png" // Fixed path
+                src={facebook}
                 alt="Facebook icon and link"
               />
               <a href="https://www.instagram.com/">Facebook</a>

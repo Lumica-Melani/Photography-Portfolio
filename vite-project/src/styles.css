@@ -121,7 +121,7 @@ body {
       hsla(0, 0%, 100%, 0.2),
       hsla(0, 0%, 100%, 0.2)
     ),
-    url("/images/Wide.png");
+    url("/wide.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -340,7 +340,7 @@ body {
 }
 
 .form-box {
-  background-image: url("/form_bg/cameras.png");
+  background-image: url("/cameras.png");
   border: 1px solid #dce3ea;
   border-radius: 20px;
   padding: 40px;
