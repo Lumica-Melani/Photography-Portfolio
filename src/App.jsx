@@ -58,18 +58,18 @@ export const reviewData = [
   {
     imageUrl: client1,
     review: "Great experience! Friendly, professional, and beautiful photos.",
-    name: "Rishab",
+    name: "Rishab. A",
   },
   {
     imageUrl: client2,
     review: "They made us feel relaxed, and the pictures turned out wonderful.",
-    name: "Ananya",
+    name: "Ananya. B",
   },
   {
     imageUrl: client3,
     review:
       "Very organized and attentive. They captured every moment perfectly.",
-    name: "Madeline",
+    name: "Madeline. L",
   },
   {
     imageUrl: client4,
