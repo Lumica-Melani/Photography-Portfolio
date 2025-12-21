@@ -1,0 +1,46 @@
+{
+  "hash": "77409f3b",
+  "configHash": "71038af1",
+  "lockfileHash": "2a3ccab1",
+  "browserHash": "1bc5c846",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "5a9b1fe5",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "edadbb4d",
+      "needsInterop": true
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "6d5ec922",
+      "needsInterop": true
+    },
+    "yet-another-react-lightbox": {
+      "src": "../../node_modules/yet-another-react-lightbox/dist/index.js",
+      "file": "yet-another-react-lightbox.js",
+      "fileHash": "fd1e2bb6",
+      "needsInterop": false
+    },
+    "react-leaflet": {
+      "src": "../../node_modules/react-leaflet/lib/index.js",
+      "file": "react-leaflet.js",
+      "fileHash": "3daf9050",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-YTOT4KTD": {
+      "file": "chunk-YTOT4KTD.js"
+    },
+    "chunk-KQTB2XQD": {
+      "file": "chunk-KQTB2XQD.js"
+    }
+  }
+}
