@@ -19,14 +19,13 @@ body {
 /* Header Start*/
 
 .header {
-  display: grid;
+  position: relative;
   width: 100%;
-  grid-template-rows: 1fr;
-  height: 500px;
-  aspect-ratio: 16/9;
+  height: min(70vh, 500px);
   background-color: black;
   font: 1rem "Nunito", sans-serif;
   color: aliceblue;
+  overflow: hidden;
 }
 
 .videoWrapper {
@@ -39,7 +38,6 @@ body {
 .videoWrapper video {
   height: 100%;
   width: 100%;
-  display: block;
   object-fit: cover;
 }
 
@@ -92,25 +90,42 @@ body {
   }
 }
 
-.header {
-  position: relative;
+@media (max-width: 768px) {
+  .logo img {
+    width: 140px;
+  }
 }
 
-.header.sticky {
-  position: sticky;
-  top: 0;
-  height: 64px;
-  background-color: black;
-  z-index: 1000;
+@media (max-width: 480px) {
+  .logo img {
+    width: 110px;
+  }
+
+  .logo {
+    animation-duration: 1s;
+  }
 }
 
-.header.sticky .videoWrapper {
-  height: 64px;
+@media (max-width: 768px) {
+  .ham-menu {
+    width: 36px;
+    height: 26px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .ham-menu span {
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 45vh;
+  }
 }
 
 /* Header End */
-
-/* About start */
 
 /* About start */
 
