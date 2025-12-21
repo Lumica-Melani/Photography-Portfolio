@@ -25,18 +25,18 @@ export default function Form({ onSubmit }) {
   };
 
   return (
-    <div class="form-box">
-      <section class="booking-section">
-        <h2 class="form-title">Share Your Vision</h2>
+    <div className="form-box">
+      <section className="booking-section">
+        <h2 className="form-title">Share Your Vision</h2>
         <form
-          class="booking-form"
+          className="booking-form"
           action="#"
           method="post"
           onSubmit={handleSubmit}
         >
-          <div class="form-group">
+          <div className="form-group">
             <input
-              class="input-style"
+              className="input-style"
               type="text"
               name="name"
               value={formData.name}
@@ -46,9 +46,9 @@ export default function Form({ onSubmit }) {
             />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <input
-              class="input-style"
+              className="input-style"
               type="email"
               name="email"
               value={formData.email}
@@ -58,9 +58,9 @@ export default function Form({ onSubmit }) {
             />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <input
-              class="input-style"
+              className="input-style"
               type="tel"
               name="phone"
               value={formData.phone}
@@ -69,9 +69,9 @@ export default function Form({ onSubmit }) {
             />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <select
-              class="input-style"
+              className="input-style"
               name="type"
               value={formData.type}
               onChange={handleChange}
@@ -86,9 +86,9 @@ export default function Form({ onSubmit }) {
             </select>
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <input
-              class="input-style"
+              className="input-style"
               type="date"
               name="date"
               value={formData.date.toString()}
@@ -97,9 +97,9 @@ export default function Form({ onSubmit }) {
             />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
             <textarea
-              class="long-text"
+              className="long-text"
               name="message"
               value={formData.message}
               onChange={handleChange}

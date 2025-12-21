@@ -189,6 +189,44 @@ body {
   color: rgba(240, 248, 255, 0.9);
   max-width: 550px;
 }
+@media (max-width: 768px) {
+  .about {
+    display: grid;
+    grid-template-columns: 1fr; /* single column */
+    row-gap: 20px; /* gap between image and text */
+    padding: 15px;
+    margin: 10px;
+    min-height: auto;
+    margin-left: 20px;
+  }
+
+  .about-Picture img {
+    width: 100%;
+    max-width: 300px; /* limit width on smaller screens */
+    margin: 0 auto; /* center image */
+    margin-top: 0; /* remove large top margin */
+    display: block;
+  }
+
+  .about-Text {
+    grid-column: auto;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    min-height: auto;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+  .about-Text h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-Text p {
+    font-size: 1rem;
+    max-width: 100%; /* allow full width */
+    line-height: 1.6;
+  }
+}
 
 /* About ends */
 
@@ -208,6 +246,14 @@ body {
   align-items: flex-start;
   justify-content: center;
   gap: 1em;
+}
+
+.portfolio-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .row-one {
@@ -299,6 +345,33 @@ body {
   letter-spacing: 0.05em;
   color: #2b2b2b;
 }
+
+@media (max-width: 768px) {
+  .portfolio-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .portfolio-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .portfolio-column .image-item {
+    width: 100%;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+}
+
 /* END OF PORTFOLIO */
 
 /* Starting of Form */
@@ -397,6 +470,60 @@ body {
   transform: rotate(45deg);
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .form-box {
+    padding: 20px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .booking-section {
+    height: auto;
+    padding: 20px 10px;
+    margin-left: 20px;
+  }
+
+  .form-title {
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .booking-form {
+    margin: 0;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .input-style,
+  .long-text {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .long-text {
+    height: 120px;
+  }
+
+  .form-btn {
+    width: 100%;
+    height: 40px;
+    margin: 10px 0 0;
+    font-size: 16px;
+  }
+}
+/* Form End */
 
 .review-image {
   margin-top: 20px;
@@ -435,7 +562,7 @@ body {
   padding: 30px;
   width: 100%;
   max-width: 350px;
-  height: 430px;
+  height: auto;
   margin: auto;
   margin-top: 20px;
 
@@ -446,15 +573,43 @@ body {
 }
 
 .slick-slide > div {
-  display: flex !important;
+  display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.review-text {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    height: auto;
+    min-height: unset;
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .review-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .review-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
 
 .footer-style {
   background-color: #6b5b52;
-  padding: 15px;
+  padding: 20px 15px;
   width: 100%;
-  height: 450px;
   margin-top: 40px;
 }
 
@@ -554,6 +709,50 @@ body {
   margin-top: 10px;
   font-size: 0.9rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    text-align: center;
+  }
+
+  .footer-columns {
+    align-items: center;
+  }
+
+  .footer-rows {
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .media-title,
+  .address-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .links {
+    margin-top: 0;
+  }
+
+  .leaflet-map {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+  }
+
+  .section-separator {
+    margin: 20px 0;
+  }
+
+  .footer-text {
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 20px;
+  }
 }
 
 /* nav menu */
